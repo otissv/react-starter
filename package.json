@@ -1,0 +1,36 @@
+{
+  "name": "express-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "parallelshell 'npm run browser'",
+    "browser": "browser-sync start --config 'bs-config.js'",
+    "webpack": "webpack -w src/**/*",
+    "copy": "cp ./src/*.html ./dist/",
+    "watch": "npm run webpack -w"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "amp-contains": "latest",
+    "amp-each": "latest",
+    "amp-map": "latest",
+    "browser-sync": "latest",
+    "chalk": "latest",
+    "css-loader": "latest",
+    "detect-node": "latest",
+    "image-webpack-loader": "latest",
+    "jsx-loader": "latest",
+    "jsxhint-loader": "latest",
+    "npm-watch": "0.0.0",
+    "parallelshell": "latest",
+    "react-bootstrap": "^0.13.3",
+    "react-masonry-mixin": "^0.5.3",
+    "react-router": "^0.11.6",
+    "react-router-bootstrap": "^0.8.3",
+    "react-waypoint": "^0.3.0",
+    "rimraf": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "webpack": "latest"
+  }
+}

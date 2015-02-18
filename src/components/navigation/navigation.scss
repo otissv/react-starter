@@ -1,0 +1,50 @@
+// navigation.scss
+
+@import "../../utils/utils";
+
+nav .container {
+  padding: 0 30px 0 30px;
+}
+.navbar {
+  border-radius: 0
+}
+
+.site-navbar {
+  @include box-shadow-util(0,0,0, rgba(0,0,0,0));
+  background-color: rgba(120, 120, 120, 0);
+  border:           0;
+  .container{
+    width: auto;
+  }
+  .navbar-nav > li {
+    font-size: 14px;
+    a, a:focus, a:hover {
+     color: #fff;
+     font-weight: bold;
+    }
+  }
+  .navbar-nav > .active {
+    a, a:focus, a:hover {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      border-bottom:    2px solid #fff;
+      color:            #fff;
+
+    }
+  }
+  $site-navbar-transaition: 0.5s, ease;
+  $site-navbar-transaition-timimg: ease;
+  $site-navbar-transaition-duration: 0.5s;
+
+  @include tranistion-multi-util( (box-shadow 0.5s, background-color 0.5s) );
+
+}
+
+.site-navbar-transiton-waypoint {
+  position: absolute;
+  top: 50px;
+}
+
+.site-navbar-transaition {
+  @include box-shadow-util(0, 1px, 3px, $gray-darker);
+  background-color: $gray;
+}

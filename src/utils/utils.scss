@@ -1,0 +1,74 @@
+// utils.scss
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+
+$margin:              15px;
+$neg-margin:          -15px;
+$background-color: #fafafa;
+
+$gray-darker:  lighten(#000, 13.5%); // #222
+$gray-dark:    lighten(#000, 20%);   // #333
+$gray:         lighten(#000, 33.5%); // #555
+$gray-light:   lighten(#000, 46.7%); // #777
+$gray-lighter: lighten(#000, 93.5%); // #eee
+
+$brand-primary: darken(#428bca, 6.5%); // #337ab7
+$brand-success: #5cb85c;
+$brand-info:    #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger:  #d9534f;
+
+
+// =============================================================================
+// Mixins
+// =============================================================================
+
+// @mixin vendor-prefix($name, $argument) {
+//   -webkit-#{$name}: #{$argument};
+//   -ms-#{$name}: #{$argument};
+//   -moz-#{$name}: #{$argument};
+//   -o-#{$name}: #{$argument};
+//   #{$name}: #{$argument};
+// }
+// p {
+//   @include vendor-prefix(hyphens, auto)
+// }
+
+// [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+@mixin box-shadow-util($horizontal-offset: 0,
+                       $vertical-offset: 1px,
+                       $blur-radius: 3px,
+                       $color: $gray-light
+                      ) {
+  $shadow: $horizontal-offset $vertical-offset $blur-radius $color;
+
+  -moz-box-shadow:    $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow:         $shadow;
+}
+
+@mixin backface-visibility-util($value: hidden) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility:    $value;
+  -ms-backface-visibility:     $value;
+  backface-visibility:         $value;
+}
+
+//transition-property, transition-duration, transition-timing-function, transition-delay
+@mixin tranistion-util ($property, $duration: 0.5s, $timing-function: ease, $delay: 0s) {
+  $var: $property $duration $timing-function $delay;
+  -webkit-transition: $var;
+  -moz--transition: $var;
+  -ms--transition: $var;
+  transition: $var;
+}
+
+@mixin tranistion-multi-util ($var) {
+  // -webkit-transition: $var;
+  // -moz--transition: $var;
+  // -ms--transition: $var;
+  transition: $var;
+}

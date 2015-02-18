@@ -1,0 +1,36 @@
+ //  base.scss
+
+@import "./utils/utils";
+
+body {
+ // font-family: 'Droid Sans', sans-serif !important;
+ font-family:      'Open Sans', sans-serif;
+ font-size:        20px;
+ color:            $gray-darker;
+ background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family:          'Montserrat', sans-serif;
+ $heading-font-weight: 700;
+}
+
+.static-top-full-fixed {
+  position: absolute;
+  top: 0;
+}
+
+.main {
+  background-color: $background-color;
+  margin-top: 51px;
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.row-fixed {
+  min-width: 480px;
+  max-width: 1024px;
+  margin:    45px auto 30px auto;
+}

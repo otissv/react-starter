@@ -1,0 +1,47 @@
+// header.scss
+
+@import "../../utils/utils";
+
+.site-header{
+  display:                 table;
+  width:                   100%;
+  position:                relative;
+  height:                  100vh;
+  background-color:        gray;
+  background:              no-repeat center center;
+  background-attachment:   scroll;
+  -webkit-background-size: cover !important;
+  -moz-background-size:    cover !important;
+  background-size:         cover !important;
+  background:              url(/images/ania.yoga.jpg);
+  background-repeat:       no-repeat;
+  margin:                  -51px 0 0 0 ;
+}
+
+.site-header-page-header {
+  display:        table-cell;
+  text-align:     center;
+  vertical-align: middle;
+  width:          100%;
+  padding-top:    150px;
+  h1 {
+    font-size:  100px;
+    margin-top: 0;
+    span {
+      color: #fff;
+      display: block;
+    }
+    small {
+      bottom: 0;
+      color:  #fff;
+    }
+  }
+}
+.page-header {
+  background-color: $gray-lighter;
+  padding: 30px;
+  margin: 0;
+  h1 {
+    margin-top: 0;
+  }
+}
